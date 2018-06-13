@@ -8,12 +8,37 @@ func closureFunc(index: Int, closure: (Int) -> Int) {
     print("closure: \(closure(index))")
 }
 
+// 常规写法
+closureFunc(index: 3, closure: { (index) -> Int in
+    index * index
+})
+
+// 尾随闭包写法
 closureFunc(index: 3) { (index) -> Int in
     index * index
 }
 
 closureFunc(index: 3) {
     $0 * 10
+}
+
+func anotherClosureFunc(closure: (Int) -> Int) {
+    print("anotherClosureFunc")
+}
+
+// 常规写法
+anotherClosureFunc(closure: { (index) -> Int in
+    index * index
+})
+
+// 尾随闭包写法
+anotherClosureFunc() { (index) -> Int in
+    index * index
+}
+
+// 如果函数只需要闭包表达式一个参数，使用尾随闭包时，您甚至可以把()省略掉。
+anotherClosureFunc { (index) -> Int in
+    index * index
 }
 
 var myClosure = { (idx:Int) -> Int in

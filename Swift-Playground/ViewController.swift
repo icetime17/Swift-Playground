@@ -9,17 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        var array1: Array<Int> = [1,2,3,4,5]
+        var array2: Array<Int> = array1
+        print("copy")
+        print(NSString(format: "%p", array1))
+        print(NSString(format: "%p", array2))
+        array1.append(6)
+        array2.append(6)
+        print("write")
+        print(NSString(format: "%p", array1))
+        print(NSString(format: "%p", array2))
+        print("done")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func randomPointInRectangle(rectangle:CGRect) -> CGPoint {
+        // return CGPoint(x: randomInt(rectangle.size.width), y: randomInt(rectangle.size.height))
+        return CGPoint(x: 10, y: 10)
+        
+        // compiler error is now:
+        // Cannot invoke 'init' with an argument list of type '(x: IntegerLiteralConvertible, y: IntegerLiteralConvertible)'
+    }
+        
 }
 

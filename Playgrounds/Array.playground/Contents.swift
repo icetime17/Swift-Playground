@@ -10,6 +10,16 @@ for index in array {
     print(index)
 }
 
+array[1...3]
+
+let range = 1...5
+range
+// 由Range构建数组
+[Int](1...5)
+[1...5].map { $0 }
+[Int](range)
+[range].map { $0 }
+
 for index in array.enumerated() {
     print(index)
 }
@@ -57,7 +67,7 @@ print(array)
 }
 
 // 归纳
-// 依次遍历每个element，执行指定操作，返回组成一个数组
+// 依次遍历每个element，执行指定操作，返回组成一个结果
 // 在0的基础上，依次添加element
 [1,2,3,4,5].reduce(0) { (result, element) -> Int in
     return result + element
@@ -93,5 +103,45 @@ arr2 += arr1
 
 var arr = [1,2,3].reversed()
 Array(arr)
+
+
+let stringArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+var result = stringArray.map {
+    Int($0)!
+}.filter {
+    $0 % 2 == 0
+}
+result
+
+
+
+// flatMap会对数组进行降维
+var array1 = [[1,2,3,4,5], [6,7,8,9,10]]
+var array2 = array1.map {
+    $0.map{ $0 + 2 }
+}
+array2
+var array3 = array1.flatMap {
+    $0.map{ $0 + 2 }
+}
+array3
+
+
+// flatMap 与 Optional
+let optionalArray: [String?] = ["AA", nil, "BB", "CC"];
+optionalArray
+var optionalResult = optionalArray.compactMap{ $0 }
+optionalResult
+
+
+var imageNames = ["test.png", "aa.png", "icon.png"];
+var imageNamesResult = imageNames.compactMap{ UIImage(named: $0) }
+imageNamesResult
+
+// 过滤掉nil值，如过滤掉无效的图片资源
+// http://swiftcafe.io/2016/03/28/about-map/
+imageNames = ["test.png", "aa.png", "icon.png", "Model.png"];
+imageNamesResult = imageNames.compactMap{ UIImage(named: $0) }
+imageNamesResult
 
 

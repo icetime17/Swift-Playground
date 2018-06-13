@@ -30,5 +30,20 @@ case .EC:
 
 
 
+enum NetworkResponseResult {
+    case status(Int, String)
+    case error(Error)
+}
 
+var code200 = NetworkResponseResult.status(200, "ok")
+var code404 = NetworkResponseResult.status(404, "Not Found")
+print(code200)
+print(code404)
+
+switch code200 {
+case .status(let code, let _):
+    print(code)
+case .error(let error):
+    print(error)
+}
 
