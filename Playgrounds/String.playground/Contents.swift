@@ -17,12 +17,18 @@ str.replacingOccurrences(of: "0de5fc94d0ba53fc7a44f0f136e82fbb/", with: "")
 arr = str.components(separatedBy: "0de5fc94d0ba53fc7a44f0f136e82fbb/")
 arr[1]
 
-
-var index = str.index(str.startIndex, offsetBy: "Hello".characters.count)
+str
+var index = str.index(str.startIndex, offsetBy: "Hello".count)
+print(index)
+print(index.encodedOffset)
 str.substring(to: index)
 
+let s = "Swift"
+let i = s.index(s.startIndex, offsetBy: 4)
+print(s[i]) // Prints "t\n"
 
-let strlength:Int = str.characters.count - 10
+
+let strlength: Int = str.count - 10
 
 index = str.index(str.startIndex, offsetBy: strlength)
 str.substring(to: index)
@@ -51,8 +57,8 @@ String(age) + "岁"
 "\(age)岁"
 "明年：\(age + 1)岁"
 
-str.characters
-for index in str.characters {
+str
+for index in str {
     print(index)
 }
 
@@ -69,7 +75,7 @@ let d = dateFormatter.string(from: Date())
 extension String {
     func substring(from: Int?, to: Int?) -> String {
         if let start = from {
-            guard start < self.characters.count else {
+            guard start < self.count else {
                 return ""
             }
         }
@@ -94,13 +100,13 @@ extension String {
         }
         
         let endIndex: String.Index
-        if let end = to, end >= 0, end < self.characters.count {
+        if let end = to, end >= 0, end < self.count {
             endIndex = self.index(self.startIndex, offsetBy: end + 1)
         } else {
             endIndex = self.endIndex
         }
         
-        return self[startIndex ..< endIndex]
+        return String(self[startIndex ..< endIndex])
     }
     
     func substring(from: Int) -> String {

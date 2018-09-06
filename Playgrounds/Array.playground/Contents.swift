@@ -17,6 +17,8 @@ range
 // 由Range构建数组
 [Int](1...5)
 [1...5].map { $0 }
+let t = [1...5].map { $0 }
+t
 [Int](range)
 [range].map { $0 }
 
