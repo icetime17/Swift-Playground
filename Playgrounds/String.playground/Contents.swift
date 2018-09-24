@@ -3,6 +3,32 @@
 import UIKit
 
 var str = "Hello, playground"
+str.count
+str.insert(contentsOf: "!", at: str.endIndex)
+str.count
+str.insert(contentsOf: "...", at: str.index(before: str.endIndex))
+str[str.startIndex]
+//str[str.endIndex]
+str.startIndex.encodedOffset
+str.endIndex.encodedOffset
+str[str.index(before: str.endIndex)]
+str[str.index(after: str.startIndex)]
+str[str.index(str.startIndex, offsetBy: 5)]
+
+for index in str.indices {
+    print(str[index], terminator: " ")
+}
+
+print("\nfor-in")
+for char in str {
+    print(char, terminator: "_")
+}
+
+
+var optionalStr: String? = "Hello"
+if let str = optionalStr {
+    print(str)
+}
 
 var arr = str.components(separatedBy: "Hello")
 print(arr.count)
@@ -21,24 +47,28 @@ str
 var index = str.index(str.startIndex, offsetBy: "Hello".count)
 print(index)
 print(index.encodedOffset)
-str.substring(to: index)
+str[..<index]
+// Just use range to slice String.
+// str.substring(to: index)
 
 let s = "Swift"
 let i = s.index(s.startIndex, offsetBy: 4)
 print(s[i]) // Prints "t\n"
 
-
 let strlength: Int = str.count - 10
 
 index = str.index(str.startIndex, offsetBy: strlength)
-str.substring(to: index)
-str.substring(from: index)
+str[..<index]
+// str.substring(to: index)
+str[index...]
+// str.substring(from: index)
 
 let start = str.index(str.startIndex, offsetBy: 5)
 let end = str.index(str.endIndex, offsetBy: 0)
 let range = start..<end
 
-str.substring(with: range)
+//str.substring(with: range)
+str[range]
 
 //str.range(of: "Hello")
 //
