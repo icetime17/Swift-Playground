@@ -41,9 +41,9 @@ print(code200)
 print(code404)
 
 switch code200 {
-case .status(let code, let _):
-    print(code)
-case .error(let error):
+case let .status(code, desc):
+    print(code, desc)
+case let .error(error):
     print(error)
 }
 

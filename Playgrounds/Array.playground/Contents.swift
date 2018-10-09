@@ -3,6 +3,7 @@
 import UIKit
 
 // MARK - Array
+// 注意Array的一些技巧： 如使用reduce来去重
 
 var array = Array<Int>()
 array = [1,3,5,7,9,11]
@@ -26,10 +27,14 @@ for index in array.enumerated() {
     print(index)
 }
 
+for (index, value) in array.enumerated() {
+    print("Item \(String(index + 1)): \(value)")
+}
+
 array.append(13)
 array[0...3]
 array = [2,4,6,8,10]
-for _ in 1...10 {
+for _ in 1...3 {
     print("say hello")
 }
 
@@ -145,5 +150,20 @@ imageNamesResult
 imageNames = ["test.png", "aa.png", "icon.png", "Model.png"];
 imageNamesResult = imageNames.compactMap{ UIImage(named: $0) }
 imageNamesResult
+
+var set: Set = ["hello", "world"]
+for v in set {
+    print(v)
+}
+var set1: Set = ["hello"]
+var set2 = set.intersection(set1)
+print(set2)
+
+
+let intervals = 0..<60
+// 使用刻度
+for interval in stride(from: intervals.startIndex, to: intervals.endIndex, by: 10) {
+    print(String(interval))
+}
 
 

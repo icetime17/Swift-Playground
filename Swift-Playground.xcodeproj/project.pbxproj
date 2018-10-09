@@ -33,13 +33,13 @@
 		A4B225021E651D73004097C1 /* NSPredicate.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSPredicate.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B225031E651D73004097C1 /* Protocol.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Protocol.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B225041E651D73004097C1 /* String.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = String.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A4B225051E651D73004097C1 /* Struct.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Struct.playground; sourceTree = "<group>"; };
-		A4B225061E651D73004097C1 /* Switch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Switch.playground; sourceTree = "<group>"; };
-		A4B225071E651D73004097C1 /* Tuple.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tuple.playground; sourceTree = "<group>"; };
-		A4B225081E651D73004097C1 /* 其他.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "其他.playground"; sourceTree = "<group>"; };
+		A4B225051E651D73004097C1 /* Struct.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Struct.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A4B225061E651D73004097C1 /* Switch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Switch.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A4B225071E651D73004097C1 /* Tuple.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tuple.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A4B225081E651D73004097C1 /* 其他.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "其他.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B225091E651D73004097C1 /* 泛型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "泛型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A4B2250A1E651D73004097C1 /* 运算符重载.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "运算符重载.playground"; sourceTree = "<group>"; };
-		A4B2250B1E651D73004097C1 /* 错误处理.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "错误处理.playground"; sourceTree = "<group>"; };
+		A4B2250A1E651D73004097C1 /* 运算符重载.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "运算符重载.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A4B2250B1E651D73004097C1 /* 错误处理.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "错误处理.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B2254D1E658008004097C1 /* Model.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Model.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

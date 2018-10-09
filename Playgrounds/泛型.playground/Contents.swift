@@ -50,7 +50,7 @@ swapArray(&arrTuple, 1, 2)
 
 
 // Stack
-// 值类型struct, 在实例方法中修改属性要加mutating关键字
+// 值类型struct, 在实例方法中修改自身属性要加mutating关键字
 struct Stack<T> {
     var items = Array<T>()
     mutating func push(item: T) {
@@ -85,4 +85,18 @@ strStack.items
 //func models<T: FMDBTable>(withId id: String, cls: T.Type) -> [T] {
 //    return SQLManager.manager.selectModels(type: cls, key: "id", value: id).first as? [T] ?? []
 //}
+
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool where T.Iterator.Element: Equatable, T.Iterator.Element == U.Iterator.Element {
+    for lhsItem in lhs {
+        for rhsItem in rhs {
+            if lhsItem == rhsItem {
+                return true
+            }
+        }
+    }
+    
+    return false
+}
+print(anyCommonElements([1,2,3], [3]))
+
 

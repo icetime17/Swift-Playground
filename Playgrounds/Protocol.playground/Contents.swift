@@ -9,7 +9,7 @@ protocol AnimalProtocol {
     func animalSleep() -> String
 }
 
-class Cat : AnimalProtocol {
+class Cat {
     var name: String!
     
     var hasNickname: Bool = false
@@ -26,7 +26,9 @@ class Cat : AnimalProtocol {
     func sleep() -> String {
         return "cat sleep"
     }
-    
+}
+
+extension Cat: AnimalProtocol {
     // AnimalProtocol
     var animalName: String {
         get {
@@ -51,13 +53,14 @@ cat.nickname
 cat.sleep()
 cat.animalSleep()
 
-// 协议作为变量(继承了该协议的类)
+// 协议作为变量(继承了该协议的类或结构体等)
 var cat2: AnimalProtocol = Cat()
 cat2.animalName
 cat2.animalSleep()
 
 
 // Struct与Protocol
+// 协议组合
 protocol Named {
     var name: String { get }
 }
@@ -76,18 +79,20 @@ wishHappyBirthday(who: person)
 
 
 
-// Swift实现OC中的NSCopying
+// Swift实现OC中的类实例的NSCopying
 protocol Copyable {
     func copy() -> Copyable
 }
-class Person0: Copyable {
+class Person0 {
     var name = ""
     var age = 0
     init(name: String, age: Int) {
         self.name = name
         self.age = age
     }
+}
 
+extension Person0: Copyable {
     func copy() -> Copyable {
         return Person0(name: self.name, age: self.age)
     }

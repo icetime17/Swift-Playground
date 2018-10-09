@@ -15,15 +15,22 @@ btn.layer.borderColor = UIColor.blue.cgColor
 btn.layer.borderWidth = 2.0
 btn.layer.cornerRadius = 10.0
 btn
-btn is UIButton
-btn is UILabel
+print(btn is UIButton)
+print(btn is UILabel)
 
 
 UIColor.red
-NSURL(string: "https://www.dianping.com")
-var url = NSURL(string: "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4201714548,3253979110&fm=80")
-UIImage(data: NSData(contentsOf: url as! URL) as! Data)
-
+URL(string: "https://www.dianping.com")
+if let url = URL(string: "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4201714548,3253979110&fm=80") {
+    do {
+        let data = try Data(contentsOf: url)
+        if let image = UIImage(data: data) {
+            print(image.size)
+        }
+    } catch {
+        print(error)
+    }
+}
 
 // 标签
 var total = 0
@@ -69,4 +76,93 @@ NotificationCenter.default.addObserver(forName: .MyNotificationName, object: nil
 
 
 
+let a = "Hello"
+switch a {
+case "hello", "Hello":
+    print("world")
+default:
+    print("others")
+}
 
+let point = (0, 2)
+switch point {
+// 值的匹配
+case let (x, y) where x == y:
+    print("equal line")
+case (let x, 0):
+    print("\(x), 0")
+case (0, let y):
+    print("0, \(y)")
+    // 贯穿
+    fallthrough
+default:
+    print("invalid")
+}
+
+
+//if #available(iOS 10, *) {
+//    print("iOS 10")
+//} else {
+//    print("other platforms")
+//}
+
+
+
+import PlaygroundSupport
+
+// 使得Playground具备延时运行
+let url = URL(string: "https://www.google.com")
+let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+    print(data)
+    print(response)
+    print(error)
+}.resume()
+
+PlaygroundPage.current.needsIndefiniteExecution = true
+
+
+class ViewController: UITableViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+extension ViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "UITableViewCell \(indexPath)"
+        return cell
+    }
+}
+
+PlaygroundPage.current.liveView = ViewController().view
+
+
+// for meter
+extension Double {
+    var km: Double { return self / 1_000.0 }
+    var cm: Double { return self * 100.0}
+    var mm: Double { return self * 1_000.0}
+}
+print(2000.0.km)
+print(2.0.cm)
+print(2.0.mm)
+
+// subscript
+extension Int {
+    subscript(digitIndex: Int) -> Int {
+        var decimalBase = 1
+        for _ in 0..<digitIndex {
+            decimalBase *= 10
+        }
+        return self / decimalBase % 10
+    }
+}
+1234567890[0]
+1234567890[1]
+1234567890[2]
+1234567890[8]

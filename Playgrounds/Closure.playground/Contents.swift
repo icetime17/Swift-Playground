@@ -67,10 +67,14 @@ let peoples = [
     "c": 30,
 ]
 let ret1 = peoples.map { (name, age) -> String in
-    var ret = "\(name) : \(age + 1)"
+    let ret = "\(name) : \(age + 1)"
     return ret
 }
 ret1
+let ret1_1 = peoples.map {
+    return "\($0) : \($1 + 1)"
+}
+ret1_1
 
 let ret2 = peoples.map { (name, age) -> String in
     if age > 20 {

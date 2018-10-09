@@ -45,3 +45,41 @@ func increaseInt(index: inout Int) -> Int {
 var i = 1
 increaseInt(index: &i)
 i
+
+func minMax(array: [Int]) -> (min: Int, max: Int)? {
+    if array.isEmpty {
+        return nil
+    }
+    
+    var curMin = array[0]
+    var curMax = array[0]
+    for value in array {
+        if value < curMin {
+            curMin = value
+        } else if value > curMax {
+            curMax = value
+        }
+    }
+    return (curMin, curMax)
+}
+if let min_max = minMax(array: [1,3,5,7,9]) {
+    print(min_max)
+    print(min_max.min)
+    print(min_max.max)
+}
+
+func chooseStepFunc(backward: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int { return input + 1 }
+    func stepBackward(input: Int) -> Int { return input - 1 }
+    return backward ? stepBackward : stepForward
+}
+var value = 10
+let movToZero = chooseStepFunc(backward: value > 0)
+while value != 0 {
+    value = movToZero(value)
+    print(value)
+}
+print(value)
+
+
+
