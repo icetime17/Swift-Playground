@@ -16,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "指针操作.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8CB7AC6E220420E3002B8213 /* 集合类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "集合类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B224E51E651D2D004097C1 /* Swift-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B224E81E651D2D004097C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B224EA1E651D2D004097C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,8 @@
 		A4B224FA1E651D73004097C1 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				8CB7AC6E220420E3002B8213 /* 集合类型.playground */,
+				8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */,
 				A4B224FB1E651D73004097C1 /* Array.playground */,
 				A4B224FC1E651D73004097C1 /* Class.playground */,
 				A4B224FD1E651D73004097C1 /* Closure.playground */,

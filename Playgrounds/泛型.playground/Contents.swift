@@ -99,4 +99,18 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool whe
 }
 print(anyCommonElements([1,2,3], [3]))
 
+func getBufferAddredd<T>(array: [T]) -> String {
+    return array.withUnsafeBufferPointer {
+        return String(describing: $0)
+    }
+}
+
+// Copy on Write for Value Type
+var a = [1,2,3]
+let copyA = a
+getBufferAddredd(array: a)
+getBufferAddredd(array: copyA)
+a.append(4)
+getBufferAddredd(array: a)
+getBufferAddredd(array: copyA)
 

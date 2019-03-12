@@ -3,6 +3,12 @@
 import UIKit
 
 var str = "Hello, playground"
+for i in 0..<str.count-1 {
+    let index = str.index(str.startIndex, offsetBy: i)
+    print(str[index])
+}
+
+
 str.count
 str.insert(contentsOf: "!", at: str.endIndex)
 str.count
@@ -175,5 +181,15 @@ extension String {
         }
         
         return self.substring(from: start, to: to)
+    }
+}
+
+
+// 说明...操作符不仅可以作用于Int，Double，也可以作用于Comparable，如String
+let test = "Hello,Playground"
+let interval = "a"..."z"
+for c in test {
+    if !interval.contains(String(c)) {
+        print("非小写字母 \(c)")
     }
 }

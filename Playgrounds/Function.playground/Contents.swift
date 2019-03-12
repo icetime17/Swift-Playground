@@ -82,4 +82,21 @@ while value != 0 {
 print(value)
 
 
+// MARK: - 多参数传递
+func sum(input: Int...) -> Int {
+    return input.reduce(0, { (r, i) -> Int in
+        r+i
+    })
+}
 
+func price(input: Int..., unit: String) -> String {
+    let sum = input.reduce(0, { (r, i) -> Int in
+        r+i
+    })
+    return "\(sum) \(unit)"
+}
+
+let s = sum(input: 1,2,3)
+print(s)
+let p = price(input: 1,2,3, unit: "元")
+print(p)

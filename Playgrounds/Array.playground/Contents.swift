@@ -4,6 +4,7 @@ import UIKit
 
 // MARK - Array
 // 注意Array的一些技巧： 如使用reduce来去重
+// 用Closure来参数化对数组的操作行为！！！尽量避免index访问。
 
 var array = Array<Int>()
 array = [1,3,5,7,9,11]
@@ -167,3 +168,9 @@ for interval in stride(from: intervals.startIndex, to: intervals.endIndex, by: 1
 }
 
 
+var arrayLocal = [1,3,5]
+var arrayRemote = [2,4,5]
+var arrayFinally = arrayLocal.reduce(arrayRemote) { (result, element) -> [Int] in
+    result.contains(element) == false ? result + [element] : result
+}
+arrayFinally

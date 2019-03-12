@@ -166,3 +166,24 @@ extension Int {
 1234567890[1]
 1234567890[2]
 1234567890[8]
+
+class ClassA {}
+class ClassB: ClassA {}
+
+let objA: AnyObject = ClassA()
+let objB: AnyObject = ClassB()
+if objA is ClassA {
+    print("objA is ClassA")
+}
+if objA is ClassB {
+    print("objA is ClassB")
+}
+if objB is ClassA {
+    print("objB is ClassA")
+}
+if objB is ClassB {
+    print("objB is ClassB")
+}
+// 而OC中
+// isKindOfClass判断是否是类或其子类的实例对象，Kind。
+// isMemberOfClass严格判断是否是类的实例对象，Member。

@@ -47,3 +47,25 @@ case let .error(error):
     print(error)
 }
 
+
+// MARK: - 通过这种方式，可以将不同类型的放到一起。
+enum IntOrStringOrBool {
+    case IntValue(Int)
+    case StringValue(String)
+    case BoolValue(Bool)
+}
+
+let mixed = [IntOrStringOrBool.IntValue(1),
+             IntOrStringOrBool.StringValue("str"),
+             IntOrStringOrBool.BoolValue(true)]
+print(mixed)
+mixed.forEach { (v) in
+    switch v {
+    case let .IntValue(i):
+        print("\(i) 元")
+    case let .StringValue(s):
+        print(s.capitalized)
+    case let .BoolValue(b):
+        print(b)
+    }
+}
