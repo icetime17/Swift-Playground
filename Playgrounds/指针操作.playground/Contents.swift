@@ -2,6 +2,8 @@
 
 import UIKit
 
+
+// MARK: - UnsafePointer
 // 接收参数：一个指针
 func memory_int(ptr: UnsafePointer<CInt>) {
     // 获取指针指向的内容
@@ -37,3 +39,37 @@ ptr.deinitialize(count: 1)
 // 再释放ptr自身
 ptr.deallocate()
 ptr = nil
+
+
+// MARK: - MemoryLayout
+struct Point {
+    var x: Float
+    var y: Float
+    var z: Float
+}
+// Float占了4个byte
+let p = Point(x: 1, y: 1, z: 1)
+
+// 实际占用的内存size
+MemoryLayout<Point>.size
+MemoryLayout<Point>.size(ofValue: p)
+// 因为内存对齐，每个元素实际消耗的内存空间为stride。
+// 内存对齐导致浪费的空间即为stride - size
+MemoryLayout<Point>.stride
+MemoryLayout<Point>.stride(ofValue: p)
+// 内存对齐方式
+MemoryLayout<Point>.alignment
+MemoryLayout<Point>.alignment(ofValue: p)
+
+MemoryLayout<Point>.offset(of: \Point.x) // 内存偏移量为0
+MemoryLayout<Point>.offset(of: \Point.y) // 内存偏移量为4个byte
+MemoryLayout<Point>.offset(of: \Point.z) // 内存偏移量为8个byte
+
+// unsafePointer
+/*
+UnsafePointer<T> 等同于 const T *
+UnsafeMutablePointer<T> 等同于 T *
+UnsafeRawPointer 等同于 const void *
+UnsafeMutableRawPointer 等同于 void *
+*/
+
