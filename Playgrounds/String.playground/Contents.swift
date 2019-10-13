@@ -193,3 +193,13 @@ for c in test {
         print("非小写字母 \(c)")
     }
 }
+
+let line = "[01:50.87]夕阳在炙热中滑落"
+if let idxOfFirstRightBracket = line.firstIndex(of: "]") {
+    let beginIdx = line.startIndex
+    let endIdx = idxOfFirstRightBracket
+    let beginTimeString = line[beginIdx ... endIdx]
+    
+    let lyric = line[line.index(after: endIdx) ..< line.endIndex]
+    
+}

@@ -187,3 +187,11 @@ if objB is ClassB {
 // 而OC中
 // isKindOfClass判断是否是类或其子类的实例对象，Kind。
 // isMemberOfClass严格判断是否是类的实例对象，Member。
+
+
+
+
+//@propertyWrapper
+//struct UserDefault<T> {
+//
+//}

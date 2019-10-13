@@ -47,6 +47,23 @@ case let .error(error):
     print(error)
 }
 
+if case let NetworkResponseResult.status(code, status) = code200 {
+    print(code, status)
+}
+
+if case let NetworkResponseResult.status(code, status) = code404 {
+    print(code, status)
+    // return
+}
+
+if case let NetworkResponseResult.error(error) = code404 {
+    print(error)
+    // return
+} else {
+    print("go on")
+}
+// 如果不用 if case let，就只能使用switch了。
+
 
 // MARK: - 通过这种方式，可以将不同类型的放到一起。
 enum IntOrStringOrBool {

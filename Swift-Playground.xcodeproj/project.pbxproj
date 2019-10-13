@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64B0113923163EF100B1630C /* Algorithm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Algorithm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "指针操作.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CB7AC6E220420E3002B8213 /* 集合类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "集合类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B224E51E651D2D004097C1 /* Swift-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +110,7 @@
 				A4B225091E651D73004097C1 /* 泛型.playground */,
 				A4B2250A1E651D73004097C1 /* 运算符重载.playground */,
 				A4B2250B1E651D73004097C1 /* 错误处理.playground */,
+				64B0113923163EF100B1630C /* Algorithm.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
@@ -270,6 +272,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -319,6 +322,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

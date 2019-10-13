@@ -192,3 +192,21 @@ let item: MovieItem = Movie(name: "Casablanca", director: "Michael Curtiz")
 print(item)
 type(of: item)
 MovieItem.self
+
+class Base {
+    var s = "" {
+        didSet {
+            print("B: \(s)")
+        }
+    }
+}
+class Sub: Base {
+    override var s: String {
+        didSet {
+            print("S: \(s)")
+        }
+    }
+}
+let c = Sub()
+c.s = "a"
+c.s = "b"
