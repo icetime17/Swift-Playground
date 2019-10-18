@@ -5,19 +5,19 @@ import UIKit
 // Struct
 struct MyStruct {
     var name = "name"
-    
+
     static var structName = "struct name"
-    
+
     func myFunc() {
         print(name)
         print("myFunc")
     }
-    
+
     // 值类型的属性默认不能在其实例方法中修改。
     mutating func changeName(name: String) {
         self.name = name
     }
-    
+
     static func structFunc() {
         print("structFunc")
     }
@@ -88,17 +88,17 @@ print(bQuestion)
 struct Matrix {
     let rows: Int, columns: Int
     var grid: [Double]
-    
+
     init(rows: Int, columns: Int) {
         self.rows = rows
         self.columns = columns
         grid = Array(repeating: 0.0, count: rows * columns)
     }
-    
+
     func isIndexValid(row: Int, column: Int) -> Bool {
         return row >= 0 && row < rows && column >= 0 && column < columns
     }
-    
+
     // 使用下标做一些自定义的操作
     subscript(row: Int, column: Int) -> Double {
         get {
@@ -121,7 +121,7 @@ matrix[1, 1]
 struct NetworkError {
     let notFound = "Not Found"
     let success = "Success"
-    
+
     // 使用下标做一些自定义的操作
     subscript(code: Int) -> (Int, String) {
         get {
@@ -141,3 +141,38 @@ struct NetworkError {
 var httpResponse = NetworkError()
 httpResponse[200]
 httpResponse[404]
+
+
+// Matrix使用subscript比较合适
+struct Matrix {
+    let rows: Int, columns: Int
+    var grid: [Double]
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array(repeating: 0.0, count: rows * columns)
+    }
+    
+    func isIndexValid(row: Int, column: Int) -> Bool {
+        return row >= 0 && row < rows && column >= 0 && column < columns
+    }
+    
+    subscript(row: Int, column: Int) -> Double {
+        get {
+            assert(isIndexValid(row: row, column: column), "Index out of range")
+            return grid[(row * columns) + column]
+        }
+        set {
+            assert(isIndexValid(row: row, column: column), "Index out of range")
+            grid[(row * columns) + column] = newValue
+        }
+    }
+}
+
+var matrix = Matrix(rows: 2, columns: 3)
+matrix[0, 0]
+matrix[1, 1] = 1.0
+matrix[1, 1]
+matrix[1, 2] = 2.0
+matrix[1, 2]
+

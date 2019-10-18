@@ -152,15 +152,6 @@ imageNames = ["test.png", "aa.png", "icon.png", "Model.png"];
 imageNamesResult = imageNames.compactMap{ UIImage(named: $0) }
 imageNamesResult
 
-var set: Set = ["hello", "world"]
-for v in set {
-    print(v)
-}
-var set1: Set = ["hello"]
-var set2 = set.intersection(set1)
-print(set2)
-
-
 let intervals = 0..<60
 // 使用刻度
 for interval in stride(from: intervals.startIndex, to: intervals.endIndex, by: 10) {

@@ -208,4 +208,3 @@ var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
 for _ in 1...5 {
     print("Random dice roll is \(d6.roll())")
 }
-

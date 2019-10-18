@@ -64,7 +64,7 @@ NotificationCenter.default.addObserver(forName: Notification.Name("MyNotificatio
     
 }
 
-// 对NSNotification.name 进行extension
+/// 对NSNotification.name 进行extension
 extension Notification.Name {
     static var MyNotificationName: Notification.Name {
         return Notification.Name("MyNotificationName")
@@ -105,42 +105,6 @@ default:
 //} else {
 //    print("other platforms")
 //}
-
-
-
-import PlaygroundSupport
-
-// 使得Playground具备延时运行
-let url = URL(string: "https://www.google.com")
-let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-    print(data)
-    print(response)
-    print(error)
-}.resume()
-
-PlaygroundPage.current.needsIndefiniteExecution = true
-
-
-class ViewController: UITableViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
-
-extension ViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "UITableViewCell \(indexPath)"
-        return cell
-    }
-}
-
-PlaygroundPage.current.liveView = ViewController().view
-
 
 // for meter
 extension Double {

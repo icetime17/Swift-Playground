@@ -16,6 +16,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64811667235A8170007DB0AE /* Sequence.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sequence.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		64811668235A8170007DB0AE /* 泛型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "泛型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		64811669235A8171007DB0AE /* Set.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Set.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6481166A235A8558007DB0AE /* 设计模式.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "设计模式.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6481166B235A8596007DB0AE /* 函数式编程.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "函数式编程.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6481166C235A8596007DB0AE /* 奇技淫巧.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "奇技淫巧.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6481166D235A863A007DB0AE /* 工程效率.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "工程效率.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		64B0113923163EF100B1630C /* Algorithm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Algorithm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "指针操作.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CB7AC6E220420E3002B8213 /* 集合类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "集合类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -40,7 +47,6 @@
 		A4B225061E651D73004097C1 /* Switch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Switch.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B225071E651D73004097C1 /* Tuple.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tuple.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B225081E651D73004097C1 /* 其他.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "其他.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A4B225091E651D73004097C1 /* 泛型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "泛型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B2250A1E651D73004097C1 /* 运算符重载.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "运算符重载.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B2250B1E651D73004097C1 /* 错误处理.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "错误处理.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A4B2254D1E658008004097C1 /* Model.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Model.png; sourceTree = "<group>"; };
@@ -91,8 +97,7 @@
 		A4B224FA1E651D73004097C1 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				8CB7AC6E220420E3002B8213 /* 集合类型.playground */,
-				8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */,
+				64B0113923163EF100B1630C /* Algorithm.playground */,
 				A4B224FB1E651D73004097C1 /* Array.playground */,
 				A4B224FC1E651D73004097C1 /* Class.playground */,
 				A4B224FD1E651D73004097C1 /* Closure.playground */,
@@ -102,15 +107,22 @@
 				A4B225011E651D73004097C1 /* Guard.playground */,
 				A4B225021E651D73004097C1 /* NSPredicate.playground */,
 				A4B225031E651D73004097C1 /* Protocol.playground */,
+				64811667235A8170007DB0AE /* Sequence.playground */,
+				64811669235A8171007DB0AE /* Set.playground */,
 				A4B225041E651D73004097C1 /* String.playground */,
 				A4B225051E651D73004097C1 /* Struct.playground */,
 				A4B225061E651D73004097C1 /* Switch.playground */,
 				A4B225071E651D73004097C1 /* Tuple.playground */,
 				A4B225081E651D73004097C1 /* 其他.playground */,
-				A4B225091E651D73004097C1 /* 泛型.playground */,
+				6481166B235A8596007DB0AE /* 函数式编程.playground */,
+				6481166C235A8596007DB0AE /* 奇技淫巧.playground */,
+				6481166D235A863A007DB0AE /* 工程效率.playground */,
+				8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */,
+				64811668235A8170007DB0AE /* 泛型.playground */,
+				6481166A235A8558007DB0AE /* 设计模式.playground */,
 				A4B2250A1E651D73004097C1 /* 运算符重载.playground */,
 				A4B2250B1E651D73004097C1 /* 错误处理.playground */,
-				64B0113923163EF100B1630C /* Algorithm.playground */,
+				8CB7AC6E220420E3002B8213 /* 集合类型.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
