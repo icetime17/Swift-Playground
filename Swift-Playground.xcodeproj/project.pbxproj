@@ -23,6 +23,8 @@
 		6481166B235A8596007DB0AE /* 函数式编程.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "函数式编程.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6481166C235A8596007DB0AE /* 奇技淫巧.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "奇技淫巧.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6481166D235A863A007DB0AE /* 工程效率.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "工程效率.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		649713BF2375B57D00B60F41 /* Swift Standard Library.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift Standard Library.playground"; sourceTree = "<group>"; };
+		649713C023764A8D00B60F41 /* 多线程.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "多线程.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		64B0113923163EF100B1630C /* Algorithm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Algorithm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "指针操作.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8CB7AC6E220420E3002B8213 /* 集合类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "集合类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -111,10 +113,12 @@
 				64811669235A8171007DB0AE /* Set.playground */,
 				A4B225041E651D73004097C1 /* String.playground */,
 				A4B225051E651D73004097C1 /* Struct.playground */,
+				649713BF2375B57D00B60F41 /* Swift Standard Library.playground */,
 				A4B225061E651D73004097C1 /* Switch.playground */,
 				A4B225071E651D73004097C1 /* Tuple.playground */,
 				A4B225081E651D73004097C1 /* 其他.playground */,
 				6481166B235A8596007DB0AE /* 函数式编程.playground */,
+				649713C023764A8D00B60F41 /* 多线程.playground */,
 				6481166C235A8596007DB0AE /* 奇技淫巧.playground */,
 				6481166D235A863A007DB0AE /* 工程效率.playground */,
 				8CB7AC6D2202F0CB002B8213 /* 指针操作.playground */,

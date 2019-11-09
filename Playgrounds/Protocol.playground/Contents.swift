@@ -208,3 +208,87 @@ var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
 for _ in 1...5 {
     print("Random dice roll is \(d6.roll())")
 }
+
+/// POP
+/// 面向协议编程的问题在于：如果不是扩展的协议默认实现，不引入继承关系，那么会有很多重复代码，如何解决？
+
+/// 如TopBarContainer
+
+protocol Human {
+    var name: String { get set }
+    var age: Int { get set }
+    func sayHi()
+}
+protocol Runnable {
+    func run()
+}
+protocol Swimming {
+    func swim()
+}
+
+struct Runner: Human, Runnable {
+    var name: String = "zhangsan"
+    var age: Int = 20
+    func sayHi() {
+        print("Hi")
+    }
+    func run() {
+        print("Run")
+    }
+}
+struct Swimmer: Human, Swimming {
+    var name: String = "zhangsan"
+    var age: Int = 20
+    func sayHi() {
+        print("Hi")
+    }
+    func swim() {
+        print("swim")
+    }
+}
+struct AllArounds: Human, Runnable, Swimming {
+    var name: String = "zhangsan"
+    var age: Int = 20
+    func sayHi() {
+        print("Hi")
+    }
+    func run() {
+        print("Run")
+    }
+    func swim() {
+        print("swim")
+    }
+}
+
+
+/// 协议中的关联类型，可理解为协议中的泛型
+protocol Container {
+    associatedtype ItemType
+    mutating func append(_ item: ItemType)
+    var count: Int { get }
+    subscript(i: Int) -> ItemType { get }
+}
+struct IntStack: Container {
+    var items: [Int] = []
+    mutating func push(_ item: Int) {
+        items.append(item)
+    }
+    mutating func pop() -> Int {
+        return items.removeLast()
+    }
+    
+    typealias ItemType = Int
+    mutating func append(_ item: Int) {
+        push(item)
+    }
+    var count: Int { return items.count }
+    subscript(i: Int) -> Int { return items[i] }
+}
+var s = IntStack()
+s.append(1)
+s.append(2)
+s.append(3)
+s[1]
+s.count
+
+

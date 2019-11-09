@@ -6,7 +6,7 @@ import PlaygroundSupport
 
 
 /// 使得Playground具备延时运行
-let url = URL(string: "https://www.google.com")
+let url = URL(string: "https://www.bing.com")
 let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
     print(data)
     print(response)
