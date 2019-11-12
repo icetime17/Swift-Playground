@@ -2,18 +2,44 @@
 
 import UIKit
 
+/// 使得Playground具备延时运行等作用
 import PlaygroundSupport
+/// 默认会在代码运行最后一句30s后停止
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 
-/// 使得Playground具备延时运行
+// 10个打印顺序未知
+for i in 0..<10 {
+    Thread.detachNewThread {
+        print(i)
+    }
+}
+
+class ObjectThread {
+    func threadTest() {
+        let thread = Thread(target:self, selector: #selector(threadWorker), object: nil)
+        thread.start()
+    }
+    @objc func threadWorker() {
+        print("threadWorker")
+    }
+}
+let obj = ObjectThread()
+obj.threadTest()
+
+
+DispatchQueue.global().async {
+    print("DispatchQueue.global.async")
+}
+
+
+
 let url = URL(string: "https://www.bing.com")
 let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
     print(data)
     print(response)
     print(error)
 }.resume()
-/// 默认会在代码运行最后一句30s后停止
-PlaygroundPage.current.needsIndefiniteExecution = true
 
 
 /// UI界面
